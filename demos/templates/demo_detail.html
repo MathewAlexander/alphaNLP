@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<h1>{{ demo.title }}</h1>
+<div class="row">
+    <div class="col-md-8">
+        <img src="{% static demo.image %}" alt="" width="100%">
+    </div>
+    <div class="col-md-4">
+        <h5>About the project:</h5>
+        <p>{{ demo.description }}</p>
+        <br>
+        <h5>Technology used:</h5>
+        <p>{{ demo.dl_model }}</p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1>Demos</h1>
+<div class="row">
+{% for demo in demos %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static demo.image %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ demo.title }}</h5>
+                <p class="card-text">{{ demo.description }}</p>
+                <a href="{% url 'demo_detail' demo.pk %}"
+                   class="btn btn-primary">
+                    Try out Demo
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
