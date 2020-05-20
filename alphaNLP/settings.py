@@ -81,6 +81,16 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'mydatabase',
+#         'USER': 'mydatabaseuser',
+#         'PASSWORD': 'mypassword',
+#         'HOST': 'ec2-54-247-169-129.eu-west-1.compute.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
 
 
 # Password validation
