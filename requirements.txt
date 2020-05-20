@@ -2,5 +2,7 @@ gunicorn
 django-heroku
 ip2geotools
 transformers
-torch==1.5.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
-torchvision==0.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+https://download.pytorch.org/whl/cpu/torch-1.0.0-cp37-cp37m-linux_x86_64.whl
+
+torch==1.5.0+cpu
+torchvision==0.6.0+cpu 
