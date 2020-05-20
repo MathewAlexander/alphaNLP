@@ -1,8 +1,20 @@
-from django.db import models
+from django.conf import settings
 
-# Create your models here.
-class Demo(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-    dl_model = models.CharField(max_length=20)
-    image = models.FilePathField(path="images/qna.jpg")
+from django.db import models
+from django.utils import timezone
+
+
+class QAData(models.Model):
+
+    context = models.TextField()
+    question = models.TextField()
+    answer = models.TextField()
+    user = models.TextField()
+    published_date = models.DateTimeField()
+
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.user

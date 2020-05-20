@@ -3,20 +3,20 @@
 {% block page_content %}
 <h1>Demos</h1>
 <div class="row">
-{% for demo in demos %}
+
     <div class="col-md-4">
         <div class="card mb-2">
-            <img class="card-img-top" src="{% static demo.image %}">
+            <img class="card-img-top" src="{% static 'images/reading_robot.jpg' %}">
             <div class="card-body">
-                <h5 class="card-title">{{ demo.title }}</h5>
-                <p class="card-text">{{ demo.description }}</p>
-                <a href="{% url 'demo_detail' demo.pk %}"
+                <h5 class="card-title"> Machine Reading comprehension</h5>
+                <p class="card-text">Deep learning model(Transformer) fine-tuned for question answering </p>
+                <a href="{% url 'qa_inference'  %}"
                    class="btn btn-primary">
                     Try out Demo
                 </a>
             </div>
         </div>
     </div>
-    {% endfor %}
+
 </div>
 {% endblock %}
